@@ -16,4 +16,11 @@ public class Birds : MonoBehaviour
         GetComponent<SpriteRenderer> ().color = Color.white;
     }
 
+    // Drag the bird
+    public void OnMouseDrag() 
+    {
+        Vector3 Destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = new Vector3(Destination.x, Destination.y);
+    }
+
 }
