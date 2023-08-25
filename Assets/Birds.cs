@@ -39,6 +39,7 @@ public class Birds : MonoBehaviour
         init_position = transform.position;
     }
 
+    // game will restart when the bird is out of the map (can't be seen on the screen)
     void Update()
     {
         if (transform.position.x > 13.7 || transform.position.x < -13 || transform.position.y < -7 || transform.position.y > 7) 
