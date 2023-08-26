@@ -10,7 +10,8 @@ public class Birds : MonoBehaviour
     public Vector2 slingshot_force; // the greater the force, the faster the bird gets when the player releases the mouse button
     public int bird_speed = 460;
     public string scene_name;
-    bool is_shot = false; // bird isn't shot yet
+    private bool is_shot = false; // used to check if the bird is shot
+    private float idle_time = 0; // time of the bird being idle (stop at the same position) after being shot by the player
 
     // Player clicks on the bird.
     public void OnMouseDown() 
@@ -50,10 +51,22 @@ public class Birds : MonoBehaviour
         init_position = transform.position;
     }
 
-    // game will restart when the bird is out of the map (can't be seen on the screen)
+    /* game will restart if the bird is out of the map or when the bird is idle 
+    for too long after being shot */
     void Update()
     {
-        if (transform.position.x > 13.7 || transform.position.x < -13 || transform.position.y < -7 || transform.position.y > 7) 
+        // update idle time
+        if (is_shot && GetComponent<Rigidbody2D>().velocity.magnitude < 0.1) 
+        {
+            idle_time += Time.deltaTime;
+        }
+        // 1. out of the map 
+        // 2. bird is idle for too long after getting shot
+        if (transform.position.x > 13.7 
+            || transform.position.x < -13 
+            || transform.position.y < -7 
+            || transform.position.y > 7
+            || idle_time >= 2.0) 
         {
             SceneManager.LoadScene(scene_name);
         }
