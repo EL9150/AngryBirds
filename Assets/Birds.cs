@@ -62,10 +62,10 @@ public class Birds : MonoBehaviour
         }
         // 1. out of the map 
         // 2. bird is idle for too long after getting shot
-        if (transform.position.x > 13.7 
-            || transform.position.x < -13 
-            || transform.position.y < -7 
-            || transform.position.y > 7
+        if (transform.position.x > 25 
+            || transform.position.x < -10 
+            || transform.position.y < -20
+            || transform.position.y > 10
             || idle_time >= 2.0) 
         {
             SceneManager.LoadScene(scene_name);
