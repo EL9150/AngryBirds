@@ -12,10 +12,12 @@ public class Birds : MonoBehaviour
     public string scene_name;
     private bool is_shot = false; // used to check if the bird is shot
     private float idle_time = 0; // time of the bird being idle (stop at the same position) after being shot by the player
+    public bool isDraggingBird = false;
 
     // Player clicks on the bird.
     public void OnMouseDown() 
     {   
+        isDraggingBird = true;
         if (!is_shot)
         {
             GetComponent<SpriteRenderer> ().color = Color.blue; // bird is highlighted in blue
@@ -24,7 +26,8 @@ public class Birds : MonoBehaviour
 
     // Player releases the mouse button.
     public void OnMouseUp() 
-    {
+    {   
+        isDraggingBird = false;
         if (!is_shot)
         {
             GetComponent<SpriteRenderer> ().color = Color.white; // bird's color is back to normal
@@ -40,8 +43,8 @@ public class Birds : MonoBehaviour
     {
         if (!is_shot)
         {
-            Vector3 MouseDestination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = new Vector3(MouseDestination.x, MouseDestination.y);
+            Vector3 Mouse_position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.position = new Vector3(Mouse_position.x, Mouse_position.y);
         }
     }
 
