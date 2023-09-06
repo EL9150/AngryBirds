@@ -9,7 +9,8 @@ public class Slingshot : MonoBehaviour
     public Transform center_position; // center of the slingshot
     public Transform idle_position; // idle position of the strips
     
-    public Birds birds; 
+    public Birds birds = null;
+    public BombBird Bomb_bird = null;
 
     void Start()
     {   
@@ -38,7 +39,7 @@ public class Slingshot : MonoBehaviour
 
     void Update()
     {   
-        if(birds.isDraggingBird) // player is dragging the bird (hold mouse down)
+        if( (birds && birds.isDraggingBird) || (Bomb_bird && Bomb_bird.isDraggingBird)) // player is dragging the bird (hold mouse down)
         {   
             
             Vector3 mouse_position = Input.mousePosition;

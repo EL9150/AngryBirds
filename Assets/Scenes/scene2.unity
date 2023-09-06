@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 64499307}
   - component: {fileID: 64499306}
   - component: {fileID: 64499305}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: crate5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 101787524}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,6 +375,7 @@ MonoBehaviour:
   center_position: {fileID: 768243294}
   idle_position: {fileID: 410134286}
   birds: {fileID: 0}
+  Bomb_bird: {fileID: 2031138798}
 --- !u!1 &410134285
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +419,7 @@ GameObject:
   - component: {fileID: 470195011}
   - component: {fileID: 470195010}
   - component: {fileID: 470195009}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: crate3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -668,7 +669,7 @@ GameObject:
   - component: {fileID: 538175460}
   - component: {fileID: 538175459}
   - component: {fileID: 538175458}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: crate2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -826,7 +827,7 @@ GameObject:
   - component: {fileID: 548128393}
   - component: {fileID: 548128395}
   - component: {fileID: 548128394}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: crate1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1046,7 +1047,7 @@ GameObject:
   - component: {fileID: 761773098}
   - component: {fileID: 761773097}
   - component: {fileID: 761773096}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: crate7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1507,7 +1508,7 @@ GameObject:
   - component: {fileID: 961320872}
   - component: {fileID: 961320871}
   - component: {fileID: 961320870}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: crate8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1797,9 +1798,9 @@ GameObject:
   - component: {fileID: 1168274441}
   - component: {fileID: 1168274440}
   - component: {fileID: 1168274444}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Monster2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2120,9 +2121,9 @@ GameObject:
   - component: {fileID: 1247590463}
   - component: {fileID: 1247590462}
   - component: {fileID: 1247590466}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Monster1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2441,7 +2442,7 @@ GameObject:
   - component: {fileID: 1510728470}
   - component: {fileID: 1510728469}
   - component: {fileID: 1510728468}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: crate6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2726,7 +2727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1677692771}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Crates
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2884,7 +2885,7 @@ GameObject:
   - component: {fileID: 1798619724}
   - component: {fileID: 1798619723}
   - component: {fileID: 1798619722}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: crate4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3042,8 +3043,8 @@ GameObject:
   - component: {fileID: 2031138794}
   - component: {fileID: 2031138793}
   - component: {fileID: 2031138797}
-  - component: {fileID: 2031138795}
   - component: {fileID: 2031138796}
+  - component: {fileID: 2031138798}
   m_Layer: 0
   m_Name: BombBird1
   m_TagString: Player
@@ -3139,23 +3140,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2031138795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031138791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f111b1e0957f4d46a82cc4b3b436523, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  init_position: {x: 0, y: 0, z: 0}
-  slingshot_force: {x: 0, y: 0}
-  bird_speed: 300
-  scene_name: scene2
-  isDraggingBird: 0
 --- !u!50 &2031138796
 Rigidbody2D:
   serializedVersion: 4
@@ -3367,6 +3351,28 @@ PolygonCollider2D:
       - {x: -0.65, y: -2.2}
       - {x: -0.24, y: -2.28}
   m_UseDelaunayMesh: 0
+--- !u!114 &2031138798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031138791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a125a344759378479deacb7e4eb7dba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  init_position: {x: 0, y: 0, z: 0}
+  slingshot_force: {x: 0, y: 0}
+  bird_speed: 300
+  scene_name: scene2
+  isDraggingBird: 0
+  exp_radius: 2
+  exp_force: 400
+  layer_hit:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
