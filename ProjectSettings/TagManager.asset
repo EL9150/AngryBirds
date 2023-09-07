@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Crates
   layers:
   - Default
   - TransparentFX

@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 64499305}
   m_Layer: 3
   m_Name: crate5
-  m_TagString: Untagged
+  m_TagString: Crates
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 470195009}
   m_Layer: 3
   m_Name: crate3
-  m_TagString: Untagged
+  m_TagString: Crates
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -671,7 +671,7 @@ GameObject:
   - component: {fileID: 538175458}
   m_Layer: 3
   m_Name: crate2
-  m_TagString: Untagged
+  m_TagString: Crates
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -829,7 +829,7 @@ GameObject:
   - component: {fileID: 548128394}
   m_Layer: 3
   m_Name: crate1
-  m_TagString: Untagged
+  m_TagString: Crates
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1049,7 +1049,7 @@ GameObject:
   - component: {fileID: 761773096}
   m_Layer: 3
   m_Name: crate7
-  m_TagString: Untagged
+  m_TagString: Crates
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1510,7 +1510,7 @@ GameObject:
   - component: {fileID: 961320870}
   m_Layer: 3
   m_Name: crate8
-  m_TagString: Untagged
+  m_TagString: Crates
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2444,7 +2444,7 @@ GameObject:
   - component: {fileID: 1510728468}
   m_Layer: 3
   m_Name: crate6
-  m_TagString: Untagged
+  m_TagString: Crates
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2887,7 +2887,7 @@ GameObject:
   - component: {fileID: 1798619722}
   m_Layer: 3
   m_Name: crate4
-  m_TagString: Untagged
+  m_TagString: Crates
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3368,11 +3368,12 @@ MonoBehaviour:
   bird_speed: 300
   scene_name: scene2
   isDraggingBird: 0
-  exp_radius: 2
-  exp_force: 400
+  exp_radius: 3
+  exp_force: 600
   layer_hit:
     serializedVersion: 2
     m_Bits: 8
+  isExploded: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

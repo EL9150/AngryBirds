@@ -7,20 +7,24 @@ public class BombBird : Birds
     public float exp_force; //explosion force
     public LayerMask layer_hit; // the layer that got hit by the explosion
 
-    protected bool isExploded = false;
+    public bool isExploded = false;
 
     // bombbird will explose when it hits an object
     protected void OnCollisionEnter2D(Collision2D bombbird) 
     {   
-        if (bombbird.collider.CompareTag("Enemy") || bombbird.collider.CompareTag("Crates"))
+        if (!isExploded)
         {
-            explode();
+            if (bombbird.collider.CompareTag("Enemy") || bombbird.collider.CompareTag("Crates"))
+            {
+                explode();
+            }
         }
     }
 
     // explode the bombbird
     protected void explode()
     {   
+        isExploded = true; 
         // find all object inside the explosion area
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, exp_radius, layer_hit);
         foreach(Collider2D collider in colliders) 
@@ -36,8 +40,6 @@ public class BombBird : Birds
                 collider.GetComponent<Rigidbody2D>().AddForce(exp_force * direction); // this force will push crates hit by the explosion
             }
         }
-        Destroy(gameObject);
-        isExploded = true; 
     }
 
     override protected void Update()
