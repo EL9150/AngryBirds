@@ -376,6 +376,7 @@ MonoBehaviour:
   center_position: {fileID: 768243294}
   idle_position: {fileID: 410134286}
   birds: {fileID: 1552207665}
+  Bomb_bird: {fileID: 0}
 --- !u!1 &375268519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1921,6 +1922,51 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!1 &1019018501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1019018503}
+  - component: {fileID: 1019018502}
+  m_Layer: 0
+  m_Name: Level_Manage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1019018502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019018501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6748696381db23a418f4220e7c1f221b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  next_scene: scene2
+--- !u!4 &1019018503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019018501}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.40476704, y: 1.6792707, z: -0.05246163}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1168274438
 GameObject:
   m_ObjectHideFlags: 0
@@ -3355,3 +3401,4 @@ SceneRoots:
   - {fileID: 1796607044}
   - {fileID: 1677692771}
   - {fileID: 203430152}
+  - {fileID: 1019018503}

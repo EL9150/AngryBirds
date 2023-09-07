@@ -61,7 +61,7 @@ public class BombBird : Birds
             || transform.position.x < -10 
             || transform.position.y < -20
             || transform.position.y > 10
-            || idle_time >= 2.0) 
+            || idle_time >= 3.0) 
         {
             SceneManager.LoadScene(scene_name);
         }
