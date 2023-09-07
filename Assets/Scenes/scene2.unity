@@ -4004,6 +4004,7 @@ MonoBehaviour:
   bird_speed: 300
   scene_name: scene2
   isDraggingBird: 0
+  Explosion_Effect: {fileID: 2226564079841124549, guid: 18ceab115d987bd48845e9388154770d, type: 3}
   exp_radius: 3
   exp_force: 600
   layer_hit:

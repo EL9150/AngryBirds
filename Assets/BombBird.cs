@@ -2,7 +2,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class BombBird : Birds
-{
+{   
+    public GameObject Explosion_Effect;
     public float exp_radius; //explosion radius
     public float exp_force; //explosion force
     public LayerMask layer_hit; // the layer that got hit by the explosion
@@ -40,6 +41,10 @@ public class BombBird : Birds
                 collider.GetComponent<Rigidbody2D>().AddForce(exp_force * direction); // this force will push crates hit by the explosion
             }
         }
+
+        // display explosion effect
+        GameObject expd_effect_inst = Instantiate(Explosion_Effect, transform.position, Quaternion.identity);
+        Destroy(expd_effect_inst, 6);
     }
 
     override protected void Update()
