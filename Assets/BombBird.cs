@@ -11,8 +11,11 @@ public class BombBird : Birds
 
     // bombbird will explose when it hits an object
     protected void OnCollisionEnter2D(Collision2D bombbird) 
-    {
-        explode();
+    {   
+        if (bombbird.collider.CompareTag("Enemy") || bombbird.collider.CompareTag("Crates"))
+        {
+            explode();
+        }
     }
 
     // explode the bombbird
