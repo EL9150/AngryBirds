@@ -26,4 +26,10 @@ public class Level_Manage : MonoBehaviour
         SceneManager.LoadScene(next_scene);
     }
 
+    // return to mainmenu
+    public void home_button()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
 }
